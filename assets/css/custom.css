@@ -1,0 +1,4 @@
+:root { --link-color: #78e1a0; --link-underline-color: #78e1a0; }
+html[data-mode='dark'] body { background: radial-gradient(circle at 75% -10%, rgba(120, 225, 160, .10), transparent 30rem), #0b0f0d; }
+#sidebar .site-title { letter-spacing: -.025em; }.post-preview .post-title { letter-spacing: -.015em; }
+a:not(.btn) { text-underline-offset: .16em; }

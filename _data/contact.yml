@@ -3,6 +3,14 @@
 - type: github
   icon: "fab fa-github"
 
+- type: link
+  icon: "fas fa-globe"
+  url: 'https://seucra.tech'
+
+- type: linkedin
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/s-t-ahmed/'
+
 - type: twitter
   icon: "fa-brands fa-x-twitter"
 
