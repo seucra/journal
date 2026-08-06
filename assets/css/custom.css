@@ -1,4 +1,142 @@
-:root { --link-color: #78e1a0; --link-underline-color: #78e1a0; }
-html[data-mode='dark'] body { background: radial-gradient(circle at 75% -10%, rgba(120, 225, 160, .10), transparent 30rem), #0b0f0d; }
-#sidebar .site-title { letter-spacing: -.025em; }.post-preview .post-title { letter-spacing: -.015em; }
-a:not(.btn) { text-underline-offset: .16em; }
+/* Chirpy Custom Theme: Schemes Teal Slate Palette (Scheme #1 from schemes.md)
+   Contrasts with seucra.github.io (Warm Rose/Coral) using a sleek Dark Teal & Mint aesthetic. */
+
+:root {
+  --main-bg: #0a0f0e;
+  --mask-bg: #131b19;
+  --main-border-color: #242e2c;
+
+  /* Text & Links */
+  --text-color: #dde8e4;
+  --text-muted-color: #a2adaa;
+  --heading-color: #9cd1c6;
+  --link-color: #9cd1c6;
+  --link-underline-color: #9cd1c6;
+
+  /* Sidebar */
+  --sidebar-bg: #0e1513;
+  --sidebar-muted-color: #a2adaa;
+  --sidebar-active-color: #9cd1c6;
+  --sidebar-hover-bg: #19211f;
+  --sidebar-btn-bg: #131b19;
+  --sidebar-site-title-color: #9cd1c6;
+
+  /* Topbar */
+  --topbar-bg: #0a0f0e;
+  --topbar-text-color: #dde8e4;
+
+  /* Cards & Posts */
+  --card-bg: #131b19;
+  --card-header-bg: #19211f;
+  --card-hover-bg: #1e2826;
+  --post-list-text-color: #dde8e4;
+  --tag-color: #9cd1c6;
+  --tag-hover: #a0eee0;
+
+  /* Buttons & Controls */
+  --button-bg: #19211f;
+  --btn-border-color: #242e2c;
+  --btn-primary-bg: #9cd1c6;
+  --btn-primary-border-color: #9cd1c6;
+  --btn-primary-color: #0a0f0e;
+  --btn-backtotop-bg: #19211f;
+  --btn-backtotop-color: #9cd1c6;
+
+  /* Search */
+  --search-bg: #131b19;
+  --search-border-color: #242e2c;
+  --search-input-bg: #0e1513;
+  --search-hints-color: #a2adaa;
+  --search-tag-bg: #19211f;
+
+  /* Code blocks & accents */
+  --highlight-bg: #0e1513;
+  --tb-border-color: #242e2c;
+}
+
+html[data-mode='dark'] {
+  --main-bg: #0a0f0e;
+  --mask-bg: #131b19;
+  --main-border-color: #242e2c;
+  --text-color: #dde8e4;
+  --text-muted-color: #a2adaa;
+  --heading-color: #9cd1c6;
+  --link-color: #9cd1c6;
+  --link-underline-color: #9cd1c6;
+  --sidebar-bg: #0e1513;
+  --sidebar-muted-color: #a2adaa;
+  --sidebar-active-color: #9cd1c6;
+  --sidebar-hover-bg: #19211f;
+  --sidebar-site-title-color: #9cd1c6;
+  --topbar-bg: #0a0f0e;
+  --topbar-text-color: #dde8e4;
+  --card-bg: #131b19;
+  --card-header-bg: #19211f;
+  --card-hover-bg: #1e2826;
+  --post-list-text-color: #dde8e4;
+  --tag-color: #9cd1c6;
+  --tag-hover: #a0eee0;
+  --btn-primary-bg: #9cd1c6;
+  --btn-primary-color: #0a0f0e;
+}
+
+html[data-mode='dark'] body {
+  background: radial-gradient(circle at 75% -10%, rgba(160, 238, 224, 0.12), transparent 30rem), #0a0f0e !important;
+  color: #dde8e4 !important;
+}
+
+/* Custom layout enhancements */
+#sidebar {
+  border-right: 1px solid #1e2826;
+}
+
+#sidebar .site-title {
+  letter-spacing: -.025em;
+  color: #9cd1c6 !important;
+}
+
+#sidebar .site-subtitle {
+  color: #a2adaa !important;
+}
+
+#sidebar .nav-item.active .nav-link {
+  color: #9cd1c6 !important;
+}
+
+.post-preview {
+  background: rgba(19, 27, 25, 0.65);
+  border: 1px solid #242e2c;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.post-preview:hover {
+  background: rgba(30, 40, 38, 0.75);
+  border-color: #9cd1c6;
+  transform: translateY(-2px);
+}
+
+.post-preview .post-title {
+  letter-spacing: -.015em;
+  color: #9cd1c6 !important;
+}
+
+a:not(.btn) {
+  text-underline-offset: .16em;
+}
+
+/* Badges & tags styling */
+.post-tag, .tag {
+  background-color: rgba(156, 209, 198, 0.12) !important;
+  color: #9cd1c6 !important;
+  border: 1px solid rgba(156, 209, 198, 0.25) !important;
+  border-radius: 999px;
+}
+
+.post-tag:hover, .tag:hover {
+  background-color: rgba(160, 238, 224, 0.25) !important;
+  color: #a0eee0 !important;
+  border-color: #a0eee0 !important;
+}
