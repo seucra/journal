@@ -1,126 +1,146 @@
 /* Chirpy Custom Theme: Schemes Teal Slate Palette (Scheme #1 from schemes.md)
-   Contrasts with seucra.github.io (Warm Rose/Coral) using a sleek Dark Teal & Mint aesthetic. */
+   Provides full Teal & Mint aesthetic contrast against seucra.github.io. */
 
-:root {
-  --main-bg: #0a0f0e;
-  --mask-bg: #131b19;
-  --main-border-color: #242e2c;
+:root,
+html,
+html[data-mode='dark'],
+html[data-mode='light'] {
+  --main-bg: #0a0f0e !important;
+  --mask-bg: #131b19 !important;
+  --main-border-color: #242e2c !important;
 
   /* Text & Links */
-  --text-color: #dde8e4;
-  --text-muted-color: #a2adaa;
-  --heading-color: #9cd1c6;
-  --link-color: #9cd1c6;
-  --link-underline-color: #9cd1c6;
+  --text-color: #dde8e4 !important;
+  --text-muted-color: #a2adaa !important;
+  --text-muted-hgh-color: #cedcd1 !important;
+  --heading-color: #9cd1c6 !important;
+  --link-color: #9cd1c6 !important;
+  --link-underline-color: #9cd1c6 !important;
 
   /* Sidebar */
-  --sidebar-bg: #0e1513;
-  --sidebar-muted-color: #a2adaa;
-  --sidebar-active-color: #9cd1c6;
-  --sidebar-hover-bg: #19211f;
-  --sidebar-btn-bg: #131b19;
-  --sidebar-site-title-color: #9cd1c6;
+  --sidebar-bg: #0e1513 !important;
+  --sidebar-muted-color: #a2adaa !important;
+  --sidebar-active-color: #9cd1c6 !important;
+  --sidebar-hover-bg: #19211f !important;
+  --sidebar-btn-bg: #131b19 !important;
+  --sidebar-site-title-color: #9cd1c6 !important;
+  --nav-cursor-color: #9cd1c6 !important;
 
   /* Topbar */
-  --topbar-bg: #0a0f0e;
-  --topbar-text-color: #dde8e4;
+  --topbar-bg: #0a0f0e !important;
+  --topbar-text-color: #dde8e4 !important;
 
   /* Cards & Posts */
-  --card-bg: #131b19;
-  --card-header-bg: #19211f;
-  --card-hover-bg: #1e2826;
-  --post-list-text-color: #dde8e4;
-  --tag-color: #9cd1c6;
-  --tag-hover: #a0eee0;
+  --card-bg: #131b19 !important;
+  --card-header-bg: #19211f !important;
+  --card-hover-bg: #1e2826 !important;
+  --post-list-text-color: #dde8e4 !important;
+  --tag-color: #9cd1c6 !important;
+  --tag-hover: #a0eee0 !important;
 
   /* Buttons & Controls */
-  --button-bg: #19211f;
-  --btn-border-color: #242e2c;
-  --btn-primary-bg: #9cd1c6;
-  --btn-primary-border-color: #9cd1c6;
-  --btn-primary-color: #0a0f0e;
-  --btn-backtotop-bg: #19211f;
-  --btn-backtotop-color: #9cd1c6;
+  --button-bg: #19211f !important;
+  --btn-border-color: #242e2c !important;
+  --btn-primary-bg: #9cd1c6 !important;
+  --btn-primary-border-color: #9cd1c6 !important;
+  --btn-primary-color: #0a0f0e !important;
+  --btn-backtotop-bg: #19211f !important;
+  --btn-backtotop-color: #9cd1c6 !important;
 
   /* Search */
-  --search-bg: #131b19;
-  --search-border-color: #242e2c;
-  --search-input-bg: #0e1513;
-  --search-hints-color: #a2adaa;
-  --search-tag-bg: #19211f;
+  --search-bg: #131b19 !important;
+  --search-border-color: #242e2c !important;
+  --search-input-bg: #0e1513 !important;
+  --search-hints-color: #a2adaa !important;
+  --search-tag-bg: #19211f !important;
 
   /* Code blocks & accents */
-  --highlight-bg: #0e1513;
-  --tb-border-color: #242e2c;
+  --highlight-bg: #0e1513 !important;
+  --tb-border-color: #242e2c !important;
+  --tb-odd-bg: #0f1513 !important;
+  --tb-even-bg: #131b19 !important;
 }
 
-html[data-mode='dark'] {
-  --main-bg: #0a0f0e;
-  --mask-bg: #131b19;
-  --main-border-color: #242e2c;
-  --text-color: #dde8e4;
-  --text-muted-color: #a2adaa;
-  --heading-color: #9cd1c6;
-  --link-color: #9cd1c6;
-  --link-underline-color: #9cd1c6;
-  --sidebar-bg: #0e1513;
-  --sidebar-muted-color: #a2adaa;
-  --sidebar-active-color: #9cd1c6;
-  --sidebar-hover-bg: #19211f;
-  --sidebar-site-title-color: #9cd1c6;
-  --topbar-bg: #0a0f0e;
-  --topbar-text-color: #dde8e4;
-  --card-bg: #131b19;
-  --card-header-bg: #19211f;
-  --card-hover-bg: #1e2826;
-  --post-list-text-color: #dde8e4;
-  --tag-color: #9cd1c6;
-  --tag-hover: #a0eee0;
-  --btn-primary-bg: #9cd1c6;
-  --btn-primary-color: #0a0f0e;
-}
-
-html[data-mode='dark'] body {
-  background: radial-gradient(circle at 75% -10%, rgba(160, 238, 224, 0.12), transparent 30rem), #0a0f0e !important;
+body {
+  background: radial-gradient(circle at 75% -10%, rgba(160, 238, 224, 0.14), transparent 35rem), #0a0f0e !important;
   color: #dde8e4 !important;
 }
 
-/* Custom layout enhancements */
-#sidebar {
-  border-right: 1px solid #1e2826;
+#main-wrapper {
+  background-color: transparent !important;
 }
 
-#sidebar .site-title {
-  letter-spacing: -.025em;
+/* Sidebar styling */
+#sidebar {
+  background-color: #0e1513 !important;
+  border-right: 1px solid #242e2c !important;
+}
+
+#sidebar .site-title a {
   color: #9cd1c6 !important;
+  letter-spacing: -.025em;
 }
 
 #sidebar .site-subtitle {
   color: #a2adaa !important;
 }
 
-#sidebar .nav-item.active .nav-link {
+#sidebar .nav-item.active .nav-link,
+#sidebar .nav-item:hover .nav-link {
   color: #9cd1c6 !important;
 }
 
-.post-preview {
-  background: rgba(19, 27, 25, 0.65);
-  border: 1px solid #242e2c;
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+#sidebar .nav-link i {
+  color: #9cd1c6 !important;
 }
 
-.post-preview:hover {
-  background: rgba(30, 40, 38, 0.75);
-  border-color: #9cd1c6;
-  transform: translateY(-2px);
+/* Topbar & Search */
+#topbar-wrapper {
+  background-color: #0a0f0e !important;
+  border-bottom: 1px solid #242e2c !important;
 }
 
-.post-preview .post-title {
+#search-input {
+  background-color: #131b19 !important;
+  border: 1px solid #242e2c !important;
+  color: #dde8e4 !important;
+}
+
+#search-input:focus {
+  border-color: #9cd1c6 !important;
+}
+
+/* Posts & Previews */
+.post-preview, article.card {
+  background: rgba(19, 27, 25, 0.75) !important;
+  border: 1px solid #242e2c !important;
+  border-radius: 0.75rem !important;
+  padding: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease !important;
+}
+
+.post-preview:hover, article.card:hover {
+  background: rgba(30, 40, 38, 0.85) !important;
+  border-color: #9cd1c6 !important;
+  transform: translateY(-2px) !important;
+}
+
+.post-preview .post-title, article h1, article h2, article h3 {
+  color: #9cd1c6 !important;
   letter-spacing: -.015em;
+}
+
+.post-meta, .post-content {
+  color: #a2adaa !important;
+}
+
+a {
   color: #9cd1c6 !important;
+}
+
+a:hover {
+  color: #a0eee0 !important;
 }
 
 a:not(.btn) {
@@ -128,15 +148,34 @@ a:not(.btn) {
 }
 
 /* Badges & tags styling */
-.post-tag, .tag {
-  background-color: rgba(156, 209, 198, 0.12) !important;
+.post-tag, .tag, .badge {
+  background-color: rgba(156, 209, 198, 0.14) !important;
   color: #9cd1c6 !important;
-  border: 1px solid rgba(156, 209, 198, 0.25) !important;
-  border-radius: 999px;
+  border: 1px solid rgba(156, 209, 198, 0.28) !important;
+  border-radius: 999px !important;
 }
 
 .post-tag:hover, .tag:hover {
-  background-color: rgba(160, 238, 224, 0.25) !important;
+  background-color: rgba(160, 238, 224, 0.28) !important;
   color: #a0eee0 !important;
   border-color: #a0eee0 !important;
+}
+
+/* Buttons & Back-to-top */
+#back-to-top {
+  background-color: #19211f !important;
+  border: 1px solid #242e2c !important;
+  color: #9cd1c6 !important;
+}
+
+#back-to-top:hover {
+  background-color: #9cd1c6 !important;
+  color: #0a0f0e !important;
+}
+
+/* Code blocks */
+div.highlighter-rouge, pre, code {
+  background-color: #0e1513 !important;
+  border: 1px solid #242e2c !important;
+  color: #dde8e4 !important;
 }

@@ -1,6 +1,6 @@
 ---
 title: Extracting Matrix SDK into a Rust WASM Library
-date: 2026-08-14 10:00:00 +0530
+date: 2026-08-09 10:00:00 +0530
 categories: [Rust, WebAssembly]
 tags: [rust, wasm, matrix, architecture, libraries]
 author: Shams Tabrez Ahmed
