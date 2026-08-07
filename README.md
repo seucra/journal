@@ -1,6 +1,6 @@
 # Blog
 
-Personal technical blog hosted at blog.seucra.tech.
+Personal technical journal hosted at journal.seucra.tech.
 
 The site is built using Chirpy and customized for my own content.
 
