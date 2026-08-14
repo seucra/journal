@@ -1,6 +1,6 @@
 ---
 title: Publishing My First Rust npm Package
-date: 2026-08-18 10:00:00 +0530
+date: 2026-08-14 10:00:00 +0530
 categories: [Rust, WebAssembly]
 tags: [rust, npm, wasm, webassembly, publishing]
 author: Shams Tabrez Ahmed
