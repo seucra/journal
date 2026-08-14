@@ -18,7 +18,7 @@ As the project grew, this coupling created several friction points:
 - Changes to the frontend interface required touching deep backend Matrix sync loops.
 - Reusing the Matrix integration in another web client or tool was impossible without copy-pasting code.
 
-I realized that Matrix client integration is fundamentally an independent concern. That realization led to extracting the Rust integration code into a standalone, reusable library: **`matrix-sdk-bridge`**.
+I realized that Matrix client integration is fundamentally an independent concern. That realization led to extracting the Rust integration code into a sperate standalone, reusable library: **`matrix-sdk-bridge`**.
 
 ---
 
