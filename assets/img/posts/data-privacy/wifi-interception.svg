@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f0e"/>
+      <stop offset="100%" stop-color="#121a18"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182320"/>
+      <stop offset="100%" stop-color="#111816"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="440" rx="16" fill="url(#bgGrad3)" stroke="#242e2c" stroke-width="1.5"/>
+
+  <text x="480" y="44" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1">PUBLIC WI-FI RISKS &amp; PACKET SNIFFING</text>
+  <text x="480" y="68" text-anchor="middle" fill="#a2adaa" font-family="system-ui, -apple-system, sans-serif" font-size="12">How shared wireless mediums expose unencrypted traffic versus TLS protected sessions</text>
+
+  <!-- Alice -->
+  <g transform="translate(60, 110)" filter="url(#shadow3)">
+    <rect width="180" height="180" rx="12" fill="url(#cardGrad3)" stroke="#78e1a0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="180" height="36" rx="12" fill="#1e2e29"/>
+    <text x="90" y="24" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Alice (Laptop)</text>
+    <circle cx="90" cy="75" r="24" fill="#13231e" stroke="#78e1a0" stroke-width="1.5"/>
+    <text x="90" y="81" text-anchor="middle" font-size="18">💻</text>
+    <text x="90" y="125" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Café Wi-Fi User</text>
+    <text x="90" y="145" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="10">Transmits 802.11</text>
+    <text x="90" y="162" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="9.5">Radio Waves</text>
+  </g>
+
+  <!-- Wi-Fi Airwaves (Broadcast Ring) -->
+  <circle cx="350" cy="200" r="85" fill="none" stroke="#2e5b49" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+  <circle cx="350" cy="200" r="130" fill="none" stroke="#2e5b49" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.4"/>
+  <circle cx="350" cy="200" r="175" fill="none" stroke="#2e5b49" stroke-width="1" stroke-dasharray="8,5" opacity="0.2"/>
+
+  <!-- Legitimate Access Point -->
+  <g transform="translate(420, 110)" filter="url(#shadow3)">
+    <rect width="180" height="180" rx="12" fill="url(#cardGrad3)" stroke="#9cd1c6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="180" height="36" rx="12" fill="#192320"/>
+    <text x="90" y="24" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Public Wi-Fi AP</text>
+    <circle cx="90" cy="75" r="24" fill="#131b19" stroke="#9cd1c6" stroke-width="1.5"/>
+    <text x="90" y="81" text-anchor="middle" font-size="18">📡</text>
+    <text x="90" y="125" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Café Access Point</text>
+    <text x="90" y="145" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="10">Shared Broadcast</text>
+    <text x="90" y="162" text-anchor="middle" fill="#9cd1c6" font-family="monospace" font-size="9.5">SSID: "Free-Coffee"</text>
+  </g>
+
+  <!-- Attacker (Packet Sniffer) -->
+  <g transform="translate(240, 260)" filter="url(#shadow3)">
+    <rect width="210" height="155" rx="12" fill="#1b1414" stroke="#f87171" stroke-width="1.5"/>
+    <rect x="0" y="0" width="210" height="32" rx="12" fill="#2d1515"/>
+    <text x="105" y="22" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚠️ Eavesdropper / Sniffer</text>
+    <text x="105" y="55" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Promiscuous Mode Wireshark</text>
+    <text x="105" y="74" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="9.5">Monitors raw RF packets</text>
+    
+    <rect x="15" y="85" width="180" height="58" rx="6" fill="#120c0c" stroke="#f87171" stroke-width="0.8"/>
+    <text x="25" y="102" fill="#f87171" font-family="monospace" font-size="9">If HTTP: Plaintext Passwords!</text>
+    <text x="25" y="118" fill="#78e1a0" font-family="monospace" font-size="9">If HTTPS: Only Opaque Ciphertext</text>
+    <text x="25" y="134" fill="#a2adaa" font-family="monospace" font-size="8.5">(ClientHello, SNI, Encrypted Exts)</text>
+  </g>
+
+  <!-- Side-by-Side Comparison Box -->
+  <g transform="translate(640, 110)" filter="url(#shadow3)">
+    <rect width="270" height="305" rx="12" fill="url(#cardGrad3)" stroke="#242e2c" stroke-width="1.5"/>
+    <text x="135" y="32" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">WHAT THE SNIFFER SEES</text>
+    
+    <!-- Without TLS -->
+    <rect x="15" y="48" width="240" height="110" rx="8" fill="#1a1212" stroke="#f87171" stroke-width="1"/>
+    <text x="25" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700">❌ Insecure HTTP Session</text>
+    <text x="25" y="90" fill="#dde8e4" font-family="monospace" font-size="9">POST /login HTTP/1.1</text>
+    <text x="25" y="106" fill="#dde8e4" font-family="monospace" font-size="9">Host: example-bank.com</text>
+    <text x="25" y="122" fill="#f87171" font-family="monospace" font-size="9">user=alice&amp;pass=secret123</text>
+    <text x="25" y="145" fill="#f87171" font-family="system-ui, sans-serif" font-size="9">Result: Full credential theft</text>
+
+    <!-- With TLS -->
+    <rect x="15" y="175" width="240" height="120" rx="8" fill="#121e1a" stroke="#78e1a0" stroke-width="1"/>
+    <text x="25" y="196" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✅ Modern TLS 1.3 Session</text>
+    <text x="25" y="216" fill="#cedcd1" font-family="monospace" font-size="9">Application Data Protocol: TLS</text>
+    <text x="25" y="232" fill="#9cd1c6" font-family="monospace" font-size="8.5">Content: 6b 91 af 2c 90 de ...</text>
+    <text x="25" y="248" fill="#a2adaa" font-family="monospace" font-size="8.5">Auth Tag: 8c f2 a1 0d (Valid)</text>
+    <text x="25" y="278" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="9">Result: Payload mathematically secure</text>
+  </g>
+</svg>

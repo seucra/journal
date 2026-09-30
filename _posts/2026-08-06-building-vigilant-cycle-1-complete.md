@@ -1,6 +1,6 @@
 ---
 title: Building Vigilant — Cycle 1 Complete
-date: 2026-08-6 10:00:00 +0530
+date: 2026-08-06 10:00:00 +0530
 categories: [Projects, Matrix]
 tags: [rust, matrix, backend, architecture, vigilant]
 author: Shams Tabrez Ahmed

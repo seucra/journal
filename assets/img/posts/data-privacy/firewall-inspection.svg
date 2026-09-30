@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f0e"/>
+      <stop offset="100%" stop-color="#121a18"/>
+    </linearGradient>
+    <linearGradient id="cardGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182320"/>
+      <stop offset="100%" stop-color="#111816"/>
+    </linearGradient>
+    <marker id="arrowGreen7" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#78e1a0" />
+    </marker>
+    <marker id="arrowRed7" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f87171" />
+    </marker>
+    <filter id="shadow7" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="450" rx="16" fill="url(#bgGrad7)" stroke="#242e2c" stroke-width="1.5"/>
+
+  <text x="480" y="44" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1">STATEFUL FIREWALL &amp; PERIMETER DEFENSE</text>
+  <text x="480" y="68" text-anchor="middle" fill="#a2adaa" font-family="system-ui, -apple-system, sans-serif" font-size="12">Inspecting connection state, enforcing access policies, and isolating internal network tiers</text>
+
+  <!-- Left: Untrusted Internet -->
+  <g transform="translate(50, 105)" filter="url(#shadow7)">
+    <rect width="200" height="230" rx="12" fill="url(#cardGrad7)" stroke="#242e2c" stroke-width="1.5"/>
+    <text x="100" y="32" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Untrusted Zone</text>
+    <text x="100" y="52" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="11">Public Internet Traffic</text>
+    
+    <!-- Legitimate Packet -->
+    <rect x="15" y="70" width="170" height="60" rx="6" fill="#13231e" stroke="#78e1a0" stroke-width="1"/>
+    <text x="25" y="92" fill="#78e1a0" font-family="monospace" font-size="10" font-weight="600">HTTPS Request</text>
+    <text x="25" y="108" fill="#dde8e4" font-family="monospace" font-size="9">Dst Port: 443 (TCP)</text>
+    <text x="25" y="122" fill="#a2adaa" font-family="monospace" font-size="8.5">SYN Flag (New Handshake)</text>
+
+    <!-- Malicious Packet -->
+    <rect x="15" y="145" width="170" height="65" rx="6" fill="#201313" stroke="#f87171" stroke-width="1"/>
+    <text x="25" y="167" fill="#f87171" font-family="monospace" font-size="10" font-weight="600">Probing / Attack</text>
+    <text x="25" y="183" fill="#dde8e4" font-family="monospace" font-size="9">Dst Port: 23 / 3389</text>
+    <text x="25" y="198" fill="#fca5a5" font-family="monospace" font-size="8.5">Telnet probe / SQL injection</text>
+  </g>
+
+  <!-- Middle: Next-Gen Firewall (NGFW) -->
+  <g transform="translate(320, 95)" filter="url(#shadow7)">
+    <rect width="280" height="250" rx="14" fill="#141f1c" stroke="#9cd1c6" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="40" rx="14" fill="#1a2b25"/>
+    <text x="140" y="26" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="14" font-weight="700">🧱 STATEFUL FIREWALL / WAF</text>
+    
+    <text x="20" y="66" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">Inspection &amp; Rule Engine</text>
+    
+    <!-- Rule 1: Allow 443 -->
+    <rect x="15" y="78" width="250" height="42" rx="6" fill="#12251e" stroke="#2e5b49"/>
+    <text x="25" y="96" fill="#78e1a0" font-family="monospace" font-size="10">RULE 1: TCP/443 (HTTPS)</text>
+    <text x="25" y="112" fill="#cedcd1" font-family="system-ui, sans-serif" font-size="9">Action: PASS (Forward to DMZ)</text>
+
+    <!-- Rule 2: Stateful Track -->
+    <rect x="15" y="128" width="250" height="42" rx="6" fill="#16221f" stroke="#242e2c"/>
+    <text x="25" y="146" fill="#9cd1c6" font-family="monospace" font-size="10">STATE: ESTABLISHED / RELATED</text>
+    <text x="25" y="162" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="9">Validate sequence numbers &amp; ACKs</text>
+
+    <!-- Rule 3: Deny all unapproved -->
+    <rect x="15" y="178" width="250" height="42" rx="6" fill="#241414" stroke="#f87171" stroke-width="0.8"/>
+    <text x="25" y="196" fill="#f87171" font-family="monospace" font-size="10">RULE DEFAULT: DROP ALL</text>
+    <text x="25" y="212" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="9">Action: SILENT DISCARD</text>
+  </g>
+
+  <!-- Flow Arrows -->
+  <path d="M 250 145 L 320 145" stroke="#78e1a0" stroke-width="2" marker-end="url(#arrowGreen7)"/>
+  <path d="M 250 220 L 320 220" stroke="#f87171" stroke-width="2" marker-end="url(#arrowRed7)"/>
+
+  <!-- Right: Internal Protected Network -->
+  <g transform="translate(670, 105)" filter="url(#shadow7)">
+    <rect width="240" height="230" rx="12" fill="url(#cardGrad7)" stroke="#78e1a0" stroke-width="1.5"/>
+    <text x="120" y="32" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Protected Subnet (DMZ)</text>
+    <text x="120" y="52" text-anchor="middle" fill="#cedcd1" font-family="system-ui, sans-serif" font-size="11">Isolated Enterprise Infrastructure</text>
+
+    <g transform="translate(20, 70)">
+      <rect width="200" height="60" rx="6" fill="#13231e" stroke="#2e5b49"/>
+      <text x="100" y="26" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Reverse Proxy / Load Balancer</text>
+      <text x="100" y="44" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="9.5">Nginx / Cloudflare Tunnel</text>
+    </g>
+
+    <g transform="translate(20, 145)">
+      <rect width="200" height="65" rx="6" fill="#13231e" stroke="#78e1a0" stroke-width="1"/>
+      <text x="100" y="26" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Application &amp; Vault Core</text>
+      <text x="100" y="44" text-anchor="middle" fill="#cedcd1" font-family="monospace" font-size="9.5">Private Virtual Cloud (VPC)</text>
+      <text x="100" y="58" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="8.5">Zero WAN exposure</text>
+    </g>
+  </g>
+
+  <!-- Forwarded Arrow to DMZ -->
+  <path d="M 600 145 L 670 145" stroke="#78e1a0" stroke-width="2" marker-end="url(#arrowGreen7)"/>
+
+  <!-- Footer explanation -->
+  <g transform="translate(50, 365)">
+    <rect width="860" height="60" rx="8" fill="#131b19" stroke="#242e2c" stroke-width="1"/>
+    <text x="430" y="26" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11.5"><tspan font-weight="600" fill="#9cd1c6">Network Defense-in-Depth:</tspan> Firewalls ensure that even if attackers know the server's public IP,</text>
+    <text x="430" y="46" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11.5">only strictly audited protocol channels (HTTPS/TLS) can reach internal applications.</text>
+  </g>
+</svg>

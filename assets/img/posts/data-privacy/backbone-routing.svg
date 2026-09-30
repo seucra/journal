@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f0e"/>
+      <stop offset="100%" stop-color="#121a18"/>
+    </linearGradient>
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182320"/>
+      <stop offset="100%" stop-color="#111816"/>
+    </linearGradient>
+    <marker id="arrow4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#9cd1c6" />
+    </marker>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="440" rx="16" fill="url(#bgGrad4)" stroke="#242e2c" stroke-width="1.5"/>
+
+  <text x="480" y="44" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1">INTERNET BACKBONE ROUTING &amp; DATA ISOLATION</text>
+  <text x="480" y="68" text-anchor="middle" fill="#a2adaa" font-family="system-ui, -apple-system, sans-serif" font-size="12">Autonomous Systems (AS) route traffic using Layer 3 headers without inspecting payload data</text>
+
+  <!-- Router 1 (Origin AS) -->
+  <g transform="translate(60, 110)" filter="url(#shadow4)">
+    <rect width="230" height="170" rx="12" fill="url(#cardGrad4)" stroke="#242e2c" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#192320"/>
+    <text x="115" y="24" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Core Router A (AS 13335)</text>
+    <text x="115" y="65" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Forwarding Information Base</text>
+    
+    <rect x="15" y="78" width="200" height="75" rx="6" fill="#111816" stroke="#242e2c"/>
+    <text x="25" y="98" fill="#a2adaa" font-family="monospace" font-size="9">Target: 198.51.100.42</text>
+    <text x="25" y="115" fill="#9cd1c6" font-family="monospace" font-size="9">Next Hop: 203.0.113.1</text>
+    <text x="25" y="132" fill="#78e1a0" font-family="monospace" font-size="9">Interface: GigabitEth0/1</text>
+  </g>
+
+  <!-- Connector A to B -->
+  <path d="M 290 195 L 360 195" stroke="#9cd1c6" stroke-width="2" marker-end="url(#arrow4)"/>
+  <text x="325" y="185" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="9">BGP Peering</text>
+
+  <!-- Router 2 (Transit AS) -->
+  <g transform="translate(365, 110)" filter="url(#shadow4)">
+    <rect width="230" height="170" rx="12" fill="url(#cardGrad4)" stroke="#242e2c" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#192320"/>
+    <text x="115" y="24" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Transit Backbone (AS 2914)</text>
+    <text x="115" y="65" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Tier-1 Optical Carrier</text>
+    
+    <rect x="15" y="78" width="200" height="75" rx="6" fill="#111816" stroke="#242e2c"/>
+    <text x="25" y="98" fill="#a2adaa" font-family="monospace" font-size="9">Inspects: IP TTL --</text>
+    <text x="25" y="115" fill="#9cd1c6" font-family="monospace" font-size="9">Calculates Header Cksum</text>
+    <text x="25" y="132" fill="#78e1a0" font-family="monospace" font-size="9">Action: Forward (L3 Switch)</text>
+  </g>
+
+  <!-- Connector B to C -->
+  <path d="M 595 195 L 665 195" stroke="#9cd1c6" stroke-width="2" marker-end="url(#arrow4)"/>
+  <text x="630" y="185" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="9">IXP Link</text>
+
+  <!-- Router 3 (Destination AS) -->
+  <g transform="translate(670, 110)" filter="url(#shadow4)">
+    <rect width="230" height="170" rx="12" fill="url(#cardGrad4)" stroke="#78e1a0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#1e2e29"/>
+    <text x="115" y="24" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Destination AS (Bank Edge)</text>
+    <text x="115" y="65" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Border Gateway Gateway</text>
+    
+    <rect x="15" y="78" width="200" height="75" rx="6" fill="#111816" stroke="#2e5b49"/>
+    <text x="25" y="98" fill="#a2adaa" font-family="monospace" font-size="9">Ingress: 198.51.100.42</text>
+    <text x="25" y="115" fill="#9cd1c6" font-family="monospace" font-size="9">Port: 443 (HTTPS)</text>
+    <text x="25" y="132" fill="#78e1a0" font-family="monospace" font-size="9">Hands off to WAF / LB</text>
+  </g>
+
+  <!-- Bottom Clarification Box -->
+  <g transform="translate(60, 305)" filter="url(#shadow4)">
+    <rect width="840" height="105" rx="10" fill="#131b19" stroke="#242e2c" stroke-width="1.5"/>
+    <text x="30" y="32" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">THE PRINCIPLE OF HOP-BY-HOP ROUTING VS. END-TO-END PRIVACY</text>
+    <text x="30" y="58" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11.5">• Routers operate at <tspan fill="#9cd1c6" font-weight="600">Layer 3 (Network)</tspan> of the OSI stack. They read only IP addresses to determine forwarding path.</text>
+    <text x="30" y="80" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11.5">• The encrypted payload remains strictly at <tspan fill="#78e1a0" font-weight="600">Layer 7 (Application)</tspan>. Transit providers have zero cryptographic access to decrypted streams.</text>
+  </g>
+</svg>

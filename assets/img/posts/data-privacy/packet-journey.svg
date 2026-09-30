@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f0e"/>
+      <stop offset="100%" stop-color="#121a18"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182320"/>
+      <stop offset="100%" stop-color="#111816"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#78e1a0" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="480" rx="16" fill="url(#bgGrad)" stroke="#242e2c" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="480" y="42" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1">PACKET JOURNEY: FROM ORIGIN TO DESTINATION</text>
+  <text x="480" y="66" text-anchor="middle" fill="#a2adaa" font-family="system-ui, -apple-system, sans-serif" font-size="12">How end-to-end TLS encryption keeps user data confidential across untrusted networks</text>
+
+  <!-- Stage 1: Alice's Laptop -->
+  <g transform="translate(40, 100)" filter="url(#shadow)">
+    <rect width="160" height="150" rx="10" fill="url(#cardGrad)" stroke="#78e1a0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="32" rx="10" fill="#1e2e29"/>
+    <text x="80" y="21" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">1. Alice's Device</text>
+    <circle cx="80" cy="65" r="20" fill="#13231e" stroke="#78e1a0" stroke-width="1.5"/>
+    <text x="80" y="70" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="16">💻</text>
+    <text x="80" y="105" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">User Input</text>
+    <text x="80" y="122" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="9.5">passwd: "secret"</text>
+    <rect x="15" y="132" width="130" height="14" rx="4" fill="#1c3028"/>
+    <text x="80" y="142" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="9">TLS Encrypts Payload</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 200 175 L 245 175" stroke="#78e1a0" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: Wi-Fi Router -->
+  <g transform="translate(255, 100)" filter="url(#shadow)">
+    <rect width="150" height="150" rx="10" fill="url(#cardGrad)" stroke="#242e2c" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="32" rx="10" fill="#192320"/>
+    <text x="75" y="21" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="600">2. Wi-Fi Router</text>
+    <circle cx="75" cy="65" r="20" fill="#131b19" stroke="#9cd1c6" stroke-width="1.5"/>
+    <text x="75" y="70" text-anchor="middle" fill="#9cd1c6" font-family="monospace" font-size="16">📡</text>
+    <text x="75" y="105" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Local Gateway</text>
+    <text x="75" y="122" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="9.5">NAT &amp; Layer 2/3</text>
+    <rect x="15" y="132" width="120" height="14" rx="4" fill="#16221f"/>
+    <text x="75" y="142" text-anchor="middle" fill="#9cd1c6" font-family="monospace" font-size="8.5">Payload is Opaque</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 405 175 L 445 175" stroke="#78e1a0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: ISP & Internet Backbone -->
+  <g transform="translate(455, 100)" filter="url(#shadow)">
+    <rect width="180" height="150" rx="10" fill="url(#cardGrad)" stroke="#242e2c" stroke-width="1.5"/>
+    <rect x="0" y="0" width="180" height="32" rx="10" fill="#192320"/>
+    <text x="90" y="21" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="600">3. ISP &amp; Backbone</text>
+    <circle cx="90" cy="65" r="20" fill="#131b19" stroke="#9cd1c6" stroke-width="1.5"/>
+    <text x="90" y="70" text-anchor="middle" fill="#9cd1c6" font-family="monospace" font-size="16">🌐</text>
+    <text x="90" y="105" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">BGP Autonomous Systems</text>
+    <text x="90" y="122" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="9.5">Inspects IP headers only</text>
+    <rect x="15" y="132" width="150" height="14" rx="4" fill="#16221f"/>
+    <text x="90" y="142" text-anchor="middle" fill="#9cd1c6" font-family="monospace" font-size="8.5">Cannot Read Ciphertext</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 635 175 L 675 175" stroke="#78e1a0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 4: Cloud Perimeter / Bank Server -->
+  <g transform="translate(685, 100)" filter="url(#shadow)">
+    <rect width="235" height="150" rx="10" fill="url(#cardGrad)" stroke="#78e1a0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="235" height="32" rx="10" fill="#1e2e29"/>
+    <text x="117" y="21" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">4. Bank Infrastructure</text>
+    
+    <g transform="translate(15, 45)">
+      <rect width="95" height="90" rx="6" fill="#16221f" stroke="#242e2c"/>
+      <text x="47" y="24" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Firewall / WAF</text>
+      <text x="47" y="45" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="8.5">DDoS Filtering</text>
+      <text x="47" y="60" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="8.5">TLS Handshake</text>
+      <text x="47" y="78" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="8">ALLOW 443</text>
+    </g>
+
+    <g transform="translate(125, 45)">
+      <rect width="95" height="90" rx="6" fill="#16221f" stroke="#78e1a0" stroke-width="1.2"/>
+      <text x="47" y="24" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="10" font-weight="600">App &amp; DB</text>
+      <text x="47" y="45" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="8.5">Decryption Key</text>
+      <text x="47" y="60" text-anchor="middle" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="8.5">Auth Validated</text>
+      <text x="47" y="78" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="8">MATCH 200 OK</text>
+    </g>
+  </g>
+
+  <!-- Packet Anatomy Card at Bottom -->
+  <g transform="translate(40, 280)" filter="url(#shadow)">
+    <rect width="880" height="165" rx="10" fill="#131b19" stroke="#242e2c" stroke-width="1.5"/>
+    <text x="30" y="32" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="14" font-weight="700">PACKET STRUCTURE IN TRANSIT (Layer 3 vs. Layer 7)</text>
+    
+    <!-- Packet Bar -->
+    <g transform="translate(30, 48)">
+      <!-- L2 / L3 Header -->
+      <rect x="0" y="0" width="140" height="42" rx="6" fill="#1e2e29" stroke="#2e5b49" stroke-width="1.5"/>
+      <text x="70" y="18" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Ethernet / IP Header</text>
+      <text x="70" y="32" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="8.5">Src IP ➔ Dst IP</text>
+
+      <!-- L4 Header -->
+      <rect x="150" y="0" width="140" height="42" rx="6" fill="#1e2e29" stroke="#2e5b49" stroke-width="1.5"/>
+      <text x="220" y="18" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="10" font-weight="600">TCP Header</text>
+      <text x="220" y="32" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="8.5">Port 54321 ➔ Port 443</text>
+
+      <!-- TLS Record -->
+      <rect x="300" y="0" width="520" height="42" rx="6" fill="#192a24" stroke="#78e1a0" stroke-width="1.5"/>
+      <text x="560" y="18" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">🔒 TLS 1.3 RECORD LAYER (ENCRYPTED CIPHERTEXT)</text>
+      <text x="560" y="32" text-anchor="middle" fill="#cedcd1" font-family="monospace" font-size="9">3a f7 e8 11 09 d2 c5 8a b4 99 71 fe 20 4c b9 83 ... (AES-256-GCM / Poly1305)</text>
+    </g>
+
+    <!-- Explanatory Footnotes -->
+    <g transform="translate(30, 110)">
+      <circle cx="8" cy="8" r="4" fill="#9cd1c6"/>
+      <text x="22" y="12" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11"><tspan font-weight="600" fill="#9cd1c6">Public Routing Metadata:</tspan> Routers across the Internet only read the IP &amp; TCP headers to deliver the packet.</text>
+      
+      <circle cx="8" cy="30" r="4" fill="#78e1a0"/>
+      <text x="22" y="34" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11"><tspan font-weight="600" fill="#78e1a0">Protected Application Data:</tspan> The password, cookies, and HTTP request body remain confidential until reaching the bank server.</text>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 title: Matrix Timeline Pagination Design
 date: 2026-08-26 10:00:00 +0530
 categories: [Matrix, Rust]
-tags: [matrix, pagination, rust, WASM, algorithms, backend]
+tags: [matrix, pagination, rust, wasm, algorithms, backend]
 author: Shams Tabrez Ahmed
 description: Understanding room timeline loading, pagination tokens, sliding sync, and state ordering in Matrix clients.
 math: true

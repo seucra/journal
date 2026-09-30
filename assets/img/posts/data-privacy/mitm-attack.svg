@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f0e"/>
+      <stop offset="100%" stop-color="#121a18"/>
+    </linearGradient>
+    <linearGradient id="cardGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182320"/>
+      <stop offset="100%" stop-color="#111816"/>
+    </linearGradient>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f87171" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#78e1a0" />
+    </marker>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="460" rx="16" fill="url(#bgGrad5)" stroke="#242e2c" stroke-width="1.5"/>
+
+  <text x="480" y="44" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1">MAN-IN-THE-MIDDLE (MITM) &amp; PKI DEFENSE</text>
+  <text x="480" y="68" text-anchor="middle" fill="#a2adaa" font-family="system-ui, -apple-system, sans-serif" font-size="12">How cryptographic certificate chains and public key validation neutralize interception attacks</text>
+
+  <!-- Section 1: The MITM Interception -->
+  <g transform="translate(60, 100)" filter="url(#shadow5)">
+    <!-- Alice -->
+    <rect width="180" height="150" rx="10" fill="url(#cardGrad5)" stroke="#78e1a0" stroke-width="1.5"/>
+    <text x="90" y="28" text-anchor="middle" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Alice (Client)</text>
+    <text x="90" y="60" text-anchor="middle" font-size="24">👤</text>
+    <text x="90" y="98" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11">Initiates Request</text>
+    <text x="90" y="118" text-anchor="middle" fill="#a2adaa" font-family="monospace" font-size="9.5">https://bank.com</text>
+  </g>
+
+  <!-- Attacker in Middle -->
+  <g transform="translate(370, 100)" filter="url(#shadow5)">
+    <rect width="220" height="150" rx="10" fill="#201313" stroke="#f87171" stroke-width="1.5"/>
+    <text x="110" y="28" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="13" font-weight="700">⚠️ MITM Interceptor</text>
+    <text x="110" y="58" text-anchor="middle" font-size="20">🕵️</text>
+    <text x="110" y="85" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="10.5">ARP Poisoning / Rogue Proxy</text>
+    <text x="110" y="105" text-anchor="middle" fill="#dde8e4" font-family="monospace" font-size="9">Attempts fake SSL cert</text>
+    <text x="110" y="125" text-anchor="middle" fill="#f87171" font-family="monospace" font-size="9">Forged CA: Self-Signed</text>
+  </g>
+
+  <!-- Legitimate Bank Server -->
+  <g transform="translate(720, 100)" filter="url(#shadow5)">
+    <rect width="180" height="150" rx="10" fill="url(#cardGrad5)" stroke="#9cd1c6" stroke-width="1.5"/>
+    <text x="90" y="28" text-anchor="middle" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Bank Server</text>
+    <text x="90" y="60" text-anchor="middle" font-size="24">🏦</text>
+    <text x="90" y="98" text-anchor="middle" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="11">Real Destination</text>
+    <text x="90" y="118" text-anchor="middle" fill="#78e1a0" font-family="monospace" font-size="9.5">Valid DigiCert / Let's Encrypt</text>
+  </g>
+
+  <!-- Arrows across MITM -->
+  <path d="M 240 175 L 360 175" stroke="#f87171" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <path d="M 590 175 L 710 175" stroke="#f87171" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- How TLS Prevents It (Bottom Half) -->
+  <g transform="translate(60, 280)" filter="url(#shadow5)">
+    <rect width="840" height="150" rx="12" fill="#131b19" stroke="#78e1a0" stroke-width="1.5"/>
+    <text x="30" y="32" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="14" font-weight="700">HOW PUBLIC KEY INFRASTRUCTURE (PKI) NEUTRALIZES THE ATTACK</text>
+    
+    <g transform="translate(30, 52)">
+      <!-- Step 1 -->
+      <rect x="0" y="0" width="245" height="75" rx="8" fill="#1a2522" stroke="#2e5b49"/>
+      <text x="12" y="24" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="11" font-weight="600">1. Digital Certificate Exchange</text>
+      <text x="12" y="44" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="10">Server sends X.509 cert signed</text>
+      <text x="12" y="60" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="10">by trusted Root CAs.</text>
+
+      <!-- Step 2 -->
+      <rect x="265" y="0" width="245" height="75" rx="8" fill="#1a2522" stroke="#2e5b49"/>
+      <text x="12" y="24" fill="#9cd1c6" font-family="system-ui, sans-serif" font-size="11" font-weight="600">2. Signature Verification</text>
+      <text x="12" y="44" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="10">Browser verifies cryptographic hash</text>
+      <text x="12" y="60" fill="#a2adaa" font-family="system-ui, sans-serif" font-size="10">using built-in trust store.</text>
+
+      <!-- Step 3 -->
+      <rect x="530" y="0" width="250" height="75" rx="8" fill="#1e2d26" stroke="#78e1a0"/>
+      <text x="12" y="24" fill="#78e1a0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">3. Tamper / Spoof Rejection</text>
+      <text x="12" y="44" fill="#dde8e4" font-family="system-ui, sans-serif" font-size="10">Attacker cannot forge CA signature.</text>
+      <text x="12" y="60" fill="#78e1a0" font-family="monospace" font-size="9.5">Connection Aborted ❌</text>
+    </g>
+  </g>
+</svg>
