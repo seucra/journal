@@ -14,7 +14,7 @@ mermaid: true
 
 When my team and I submitted our solution for **Smart India Hackathon 2026 (Problem Statement SIH26184)**—tasked by the Ministry of Home Affairs with building a predictive analytics framework to forecast cash withdrawal points—my responsibility as team lead and primary backend engineer was to strip away hackathon theater and address the actual mechanical realities of modern cybercrime syndicates.
 
-This post breaks down the core architecture of **CyberShield**: how we modeled financial fan-outs, why we built a dual-mode streaming backend, the mathematics behind pre-egress terminal forecasting, and how we addressed the collateral damage of blanket bank freezes.
+This post breaks down the core architecture of **CyberShield** ([GitHub Repository](https://github.com/harshada2576/SIH2026) · [Interactive Portal](https://harshada2576.github.io/SIH2026/) · [Project Record](https://seucra.tech/projects/sih2026/)): how we modeled financial fan-outs, why we built a dual-mode streaming backend, the mathematics behind pre-egress terminal forecasting, and how we addressed the collateral damage of blanket bank freezes.
 
 ---
 
@@ -305,3 +305,14 @@ Investing effort into writing **177 passing automated unit and integration tests
 Building CyberShield for SIH26184 was a rewarding exercise in systems engineering. Addressing financial cybercrime effectively is not just an algorithmic challenge—it requires designing distributed pipelines that operate within narrow physical time windows, respecting legal frameworks under the BSA 2023, and protecting innocent bystanders from automated overreach.
 
 When systems are built with these real-world constraints in mind, the gap between criminal agility and law enforcement intervention can finally begin to close.
+
+---
+
+## Project Links & Artifacts
+
+* **GitHub Repository:** [harshada2576/SIH2026](https://github.com/harshada2576/SIH2026)
+* **Interactive Evaluation Portal:** [https://harshada2576.github.io/SIH2026/](https://harshada2576.github.io/SIH2026/)
+* **Portfolio Project Overview:** [CyberShield (SIH 2026) on seucra.tech](https://seucra.tech/projects/sih2026/)
+* **Live Cloud Core API:** [https://sih-render.seucra.tech/](https://sih-render.seucra.tech/)
+* **Signed Release APK:** [CyberShield-v1.0.0-release.apk](https://github.com/harshada2576/SIH2026/releases/download/v0.0.1/CyberShield-v1.0.0-release.apk)
+

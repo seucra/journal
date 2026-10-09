@@ -361,3 +361,17 @@ Understanding these mechanisms reinforces the fundamental principle of digital e
 8. **Cloudflare Learning**. *What is Zero Trust Security?* [https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/](https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/)
 9. **Tanenbaum, A. S., & Wetherall, D. J.** *Computer Networks (5th Edition).* Pearson.
 10. **Stallings, W.** *Cryptography and Network Security: Principles and Practice.* Pearson.
+
+---
+
+## Authored by 
+
+Team xX_FallenAngelsWithR3KTShotgun2077_Xx (Third-year students of B.Tech Computer Engineering Vidyalankar Institute of Technology, Mumbai
+
+>Ashish Chaudhari
+>Dibyaranjan Prusty
+>Khan Rayed
+>Shams Tabrez Ahmed
+
+### Under The Guidance of 
+>Dr Amit K. Nerurkar, Ms. Shivani Herlekar (Vidyalankar Institute of Technology)
