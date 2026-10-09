@@ -88,3 +88,12 @@ Detecting when a room history has reached its beginning (`hit_end = true`) is cr
 ## Conclusion
 
 Understanding protocol-level mechanics like timeline pagination transforms how you write software. Building on top of Matrix forces you to appreciate distributed event DAGs, tokenized pagination, and state synchronization—concepts that apply far beyond chat applications.
+
+---
+
+## Project Links & References
+
+* **GitHub Repository:** [seucra/Vigilant ↗](https://github.com/seucra/Vigilant)
+* **Extracted Library:** [@seucra/matrix-sdk-bridge (npm) ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge) · [Library Repo](https://github.com/seucra/matrix-sdk-bridge)
+* **Portfolio System Record:** [Vigilant on seucra.tech ↗](https://seucra.tech/projects/vigilant/)
+* **Previous Architectural Post:** [Architecture Behind Vigilant ↗](https://journal.seucra.tech/posts/architecture-behind-vigilant/)

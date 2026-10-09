@@ -76,3 +76,12 @@ Here is a simplified architectural view of how data flows across the WASM bounda
 - **Treat Internal Tooling as Open Source**: Even if a library starts as part of an internal project, structuring it like an open-source package forces cleaner abstractions, better documentation, and higher code quality.
 
 In the next post, I will share the process of packaging this Rust WebAssembly bridge and publishing it to npm as `@seucra/matrix-sdk-bridge`.
+
+---
+
+## Project Links & References
+
+* **GitHub Repository:** [seucra/matrix-sdk-bridge ↗](https://github.com/seucra/matrix-sdk-bridge)
+* **npm Package:** [@seucra/matrix-sdk-bridge (npm) ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge)
+* **Portfolio Library Record:** [Matrix SDK Bridge on seucra.tech ↗](https://seucra.tech/projects/matrix-sdk-bridge/)
+* **Parent System:** [Vigilant on seucra.tech ↗](https://seucra.tech/projects/vigilant/) · [seucra/Vigilant (GitHub)](https://github.com/seucra/Vigilant)

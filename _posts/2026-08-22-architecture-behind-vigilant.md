@@ -100,3 +100,13 @@ Running Synapse, PostgreSQL, MinIO, and Nginx inside Docker Compose containers e
 ## Lessons Learned
 
 Building Vigilant reinforced that **great architecture is about restraint**. By offloading protocol complexity to Matrix Synapse and isolating client state in a Rust WASM bridge, the codebase remains modular, testable, and interview-defensible.
+
+---
+
+## Project Links & References
+
+* **GitHub Repository:** [seucra/Vigilant ↗](https://github.com/seucra/Vigilant)
+* **Extracted Library:** [@seucra/matrix-sdk-bridge (npm) ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge) · [Library Repo](https://github.com/seucra/matrix-sdk-bridge)
+* **Portfolio System Record:** [Vigilant on seucra.tech ↗](https://seucra.tech/projects/vigilant/)
+* **Infrastructure Specification:** [Matrix Synapse on seucra.tech ↗](https://seucra.tech/infrastructure/matrix-synapse/)
+* **Next Architectural Post:** [Matrix Timeline Pagination Design ↗](https://journal.seucra.tech/posts/matrix-timeline-pagination-design/)

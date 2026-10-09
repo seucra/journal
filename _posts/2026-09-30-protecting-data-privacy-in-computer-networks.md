@@ -375,3 +375,10 @@ Team xX_FallenAngelsWithR3KTShotgun2077_Xx (Third-year students of B.Tech Comput
 
 ### Under The Guidance of 
 >Dr Amit K. Nerurkar, Ms. Shivani Herlekar (Vidyalankar Institute of Technology)
+
+---
+
+## Related Portfolio Records
+
+* **CyberShield (SIH26184):** [CyberShield on seucra.tech ↗](https://seucra.tech/projects/sih2026/)
+* **Academic Research Overview:** [Research & Coursework on seucra.tech ↗](https://seucra.tech/research/)

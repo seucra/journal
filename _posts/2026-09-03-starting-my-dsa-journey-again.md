@@ -57,3 +57,10 @@ DSA Repository Structure
 ## Conclusion
 
 Rebuilding computer science fundamentals is a long-term commitment. True technical confidence comes from knowing that when you face a performance bottleneck or algorithmic challenge, you can break it down, analyze its complexity, and write a clean, defensible solution from first principles.
+
+---
+
+## Repository & References
+
+* **GitHub Repository:** [seucra/DSA ↗](https://github.com/seucra/DSA)
+* **Portfolio Overview:** [About Shams Tabrez Ahmed on seucra.tech ↗](https://seucra.tech/about/)

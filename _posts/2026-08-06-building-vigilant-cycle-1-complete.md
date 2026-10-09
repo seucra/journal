@@ -84,3 +84,12 @@ Now that Cycle 1 backend milestones are solid, the focus shifts toward:
 - Expanding documentation and integration tests for `@seucra/matrix-sdk-bridge`.
 
 *Building Vigilant has proven that engineering depth comes from understanding system boundaries, making deliberate trade-offs, and shipping defensible work.*
+
+---
+
+## Project Links & References
+
+* **GitHub Repository:** [seucra/Vigilant ↗](https://github.com/seucra/Vigilant)
+* **Extracted Library:** [@seucra/matrix-sdk-bridge (npm) ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge) · [Library Repo](https://github.com/seucra/matrix-sdk-bridge)
+* **Portfolio Record:** [Vigilant Overview on seucra.tech ↗](https://seucra.tech/projects/vigilant/)
+* **Next Architectural Post:** [Architecture Behind Vigilant ↗](https://journal.seucra.tech/posts/architecture-behind-vigilant/)

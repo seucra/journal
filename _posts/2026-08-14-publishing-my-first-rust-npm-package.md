@@ -101,3 +101,12 @@ npm publish --access public
 ## Conclusion
 
 Publishing `@seucra/matrix-sdk-bridge` was a major milestone in my Rust learning journey. It proved that Rust and WebAssembly can bridge the gap between low-level systems programming and modern browser applications seamlessly.
+
+---
+
+## Project Links & References
+
+* **npm Package:** [@seucra/matrix-sdk-bridge on npmjs.com ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge)
+* **GitHub Repository:** [seucra/matrix-sdk-bridge ↗](https://github.com/seucra/matrix-sdk-bridge)
+* **Portfolio Library Record:** [Matrix SDK Bridge on seucra.tech ↗](https://seucra.tech/projects/matrix-sdk-bridge/)
+* **Parent System:** [Vigilant on seucra.tech ↗](https://seucra.tech/projects/vigilant/) · [seucra/Vigilant (GitHub)](https://github.com/seucra/Vigilant)
