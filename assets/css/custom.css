@@ -157,6 +157,27 @@ html[data-mode='light'] body {
   letter-spacing: -.025em;
 }
 
+#avatar img {
+  border-radius: 50% !important;
+  border: 1px solid var(--main-border-color) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+#avatar:hover img {
+  border-color: var(--link-color) !important;
+  transform: scale(1.04);
+}
+
+/* Dynamic avatar: Silver argiope in dark mode, Black widow in light mode */
+html[data-mode='light'] #avatar img {
+  content: url('/assets/img/logo-light.png') !important;
+}
+
+html[data-mode='dark'] #avatar img {
+  content: url('/assets/img/logo-dark.png') !important;
+}
+
 #sidebar .site-subtitle {
   color: var(--sidebar-muted-color) !important;
 }
