@@ -19,6 +19,12 @@ As I started building complex backend systems like **Vigilant**, I realized that
 
 This post marks the beginning of my **systematic DSA rebuild**.
 
+> **Portfolio & Study References:**  
+> • **Engineering Hub:** [seucra.tech ↗](https://seucra.tech)  
+> • **Code Solutions:** [rosetta-code-solutions (GitHub) ↗](https://github.com/seucra/rosetta-code-solutions)  
+> • **Related Skills:** [Data Structures & Algorithms (seucra.tech) ↗](https://seucra.tech/skills/dsa/) · [Systems Programming ↗](https://seucra.tech/skills/systems-programming/)
+{: .prompt-tip }
+
 ---
 
 ## Why Rebuild DSA Now?

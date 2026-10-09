@@ -15,10 +15,11 @@ Over several years of learning to code, every developer accumulates repositories
 
 Eventually, you end up with 30+ repositories that fail to communicate who you are as an engineer. A reviewer or recruiter looking at an uncurated GitHub profile sees a random pile of code rather than a coherent journey.
 
-In August 2026, I initiated a **Digital Profile Reconstruction**:
-1. Reorganizing my local and public GitHub repositories into a clear **engineering ecosystem**.
-2. Rebuilding my personal site ([seucra.tech](https://seucra.tech)) using Hugo + Blowfish to act as an executive engineering showcase.
-3. Adopting a strict philosophy of **evidence over claims**.
+> **Portfolio & Ecosystem References:**  
+> • **Engineering Portfolio:** [seucra.tech ↗](https://seucra.tech)  
+> • **Curated Repositories:** [github.com/seucra ↗](https://github.com/seucra)  
+> • **Key Projects:** [Vigilant (seucra.tech) ↗](https://seucra.tech/projects/vigilant/) · [Matrix SDK Bridge ↗](https://seucra.tech/projects/matrix-sdk-bridge/) · [CyberShield (SIH26184) ↗](https://seucra.tech/projects/sih2026/)
+{: .prompt-tip }
 
 ---
 

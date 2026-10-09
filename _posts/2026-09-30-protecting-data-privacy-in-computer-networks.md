@@ -16,6 +16,13 @@ That simple question lies at the heart of **data privacy in computer networks**.
 
 Whenever we open a website, send an instant message, upload files to cloud storage, or complete an online payment, our data travels through a complex network owned and managed by dozens of distinct entities. Every intermediate device forwards our packets, but none of them should ever be able to read their contents.
 
+> **Portfolio & Study Reference:**  
+> • **Engineering Hub:** [seucra.tech ↗](https://seucra.tech)  
+> • **Coursework & Research:** [Network Security & Vulnerability Prioritization (seucra.tech) ↗](https://seucra.tech/research/vulnerability-prioritization/)  
+> • **Related Skills:** [Cybersecurity Foundations (seucra.tech) ↗](https://seucra.tech/skills/cybersecurity/) · [Distributed Systems ↗](https://seucra.tech/skills/distributed-systems/)  
+> • **Author Profile:** [github.com/seucra ↗](https://github.com/seucra)
+{: .prompt-tip }
+
 This article follows the journey of a single packet traveling from a user's computer to a server while exploring the technologies that protect data from unauthorized access.
 
 ---
