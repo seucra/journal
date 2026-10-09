@@ -22,6 +22,7 @@ The companion site, [seucra.tech](https://seucra.tech), is my engineering portfo
 | **Matrix SDK Bridge** | Extracted Rust-to-WebAssembly client binding | [seucra.tech/projects/matrix-sdk-bridge](https://seucra.tech/projects/matrix-sdk-bridge/) | [npm package ↗](https://www.npmjs.com/package/@seucra/matrix-sdk-bridge) · [GitHub ↗](https://github.com/seucra/matrix-sdk-bridge) |
 | **CyberShield** | SIH 2026 cash-out terminal interception (PS SIH26184) | [seucra.tech/projects/sih2026](https://seucra.tech/projects/sih2026/) | [github.com/harshada2576/SIH2026 ↗](https://github.com/harshada2576/SIH2026) |
 | **Triton** | Multi-crate Rust directory walker & build cache | [seucra.tech/projects/triton](https://seucra.tech/projects/triton/) | Rust 2021 Workspace |
+| **Math Suite** | Numerical linear algebra library (LU, QR, solvers) in Rust | [seucra.tech/projects](https://seucra.tech/projects/) | Rust 2021 Library |
 | **VTS** | Academic vulnerability triage & EPSS analytics | [seucra.tech/research/vulnerability-prioritization](https://seucra.tech/research/vulnerability-prioritization/) | [GitHub Repository ↗](https://github.com/seucra/vulnarability-prioritization-triage-system) |
 | **Rosetta Solutions** | Algorithmic implementations & DSA solutions | [seucra.tech/timeline](https://seucra.tech/timeline/) | [github.com/seucra/rosetta-code-solutions ↗](https://github.com/seucra/rosetta-code-solutions) |
 

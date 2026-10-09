@@ -308,6 +308,21 @@ When systems are built with these real-world constraints in mind, the gap betwee
 
 ---
 
+## Core Engineering Team & Attribution
+
+CyberShield was engineered as a collaborative team effort:
+
+| Contributor | GitHub Handle | Key Responsibilities |
+| :--- | :--- | :--- |
+| **Harshada Avhad** | [`@harshada2576`](https://github.com/harshada2576) | Team Lead, ML Systems, Hybrid Scoring & Geospatial Intelligence |
+| **Shams Tabrez Ahmed** | [`@seucra`](https://github.com/seucra) | Architecture, Full-Stack Systems, Sparse Merkle Tree Ledger & Section 63 BSA Engine |
+| **Shreya Nikam** | [`@NikamShreya696`](https://github.com/NikamShreya696) | Data Engineering, 1 Crore Synthetic Generator & Macro Trend Modeling |
+| **The-CoDexR3kt** | [`@The-CoDexR3kt`](https://github.com/The-CoDexR3kt) | Backend Infrastructure, Kafka Streams & Fast Storage Persistence |
+| **Abaan Mhaisker** | [`@abaanmhaisker`](https://github.com/abaanmhaisker) | Security Architecture, Cryptography & Prediction Validation Engine |
+| **Dakshata Mhatre** | [`@DakshataMhatre`](https://github.com/DakshataMhatre) | Mobile Engineering, Jetpack Compose Radar Map & Tactical UI/UX |
+
+---
+
 ## Project Links & Artifacts
 
 * **GitHub Repository:** [harshada2576/SIH2026](https://github.com/harshada2576/SIH2026)
